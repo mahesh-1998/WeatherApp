@@ -95,6 +95,15 @@ DATABASES = {
          'PORT' : '5432',
     },
 }
+LEAFLET_CONFIG = {
+    # conf here
+    'DEFAULT_CENTER': (38.959409,-102.895450),
+    'DEFAULT_ZOOM': 4,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'DEFAULT_PRECISION': 6,
+    
+}
 
 
 # Password validation
