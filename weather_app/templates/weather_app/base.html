@@ -1,13 +1,30 @@
 {% load leaflet_tags %}
-
+{% load static %}
 <head>
-    ...
     {% leaflet_js %}
     {% leaflet_css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'weather_app/style.css' %}"/>
+    <script type="text/javascript" src="{% static 'weather_app/script.js'%}"></script>
+
 </head>
 
 <body>
-    ...
-    {% leaflet_map "yourmap" %}
-    ...
+    <h2>Weather App</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label for="city">Enter City Name</label>
+        <input id="city" name="city" type="text">
+        <button  type="submit" onclick="myFunction()">Search</button>
+    </form>
+      
+    {% leaflet_map "map" %}
+
+    {% block content%}
+        <label>City Name</label>
+        <P>{{city.name}}</P>
+        <label>Temperature</label>
+        <P>{{city.temperature }}</P>
+    {% endblock content %}
+    
 </body>
+
