@@ -28,6 +28,10 @@
         </div>
     </section>
 
+
+          
+
+
     <section class="section">
         <div class="container">
             <div class="columns">
@@ -38,12 +42,22 @@
                             <div class="control is-expanded">
                                 <input class="input" type="text" id="cord" name="cord" placeholder="Ex: Latitude,Longitude">
                             </div>
-                            <div class="control">
-                                <button class="button is-info">
-                                    Search
-                                </button>
+                        </div>
+
+                        <hr>
+
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                <input class="input" type="text" id="city" name="city" placeholder="Ex: Boston">
                             </div>
                         </div>
+
+                        <div class="control" style="text-align: center;">
+                            <button class="button is-info">
+                                Search
+                            </button>
+                        </div>
+
                     </form>
                 </div>
             </div>
@@ -51,8 +65,25 @@
     </section>
 
 
+    <div class="card flex-row flex-wrap" style="width: 50rem; margin-left: 150px; margin-left: 150px;">
+        <div class="card-header border-0" style="width: 5rem;">
+            <img src="{{ img }}" alt="">
+        </div>
+        <div class="card-block px-2">
+            <h5 class="card-title">Weather details</h5>
+            <p class="card-text">{{ desc }}</p>
+            <h3>Temperature {{ temp }} F </h3>
+        </div>
+    </div>
+
     
-      
+          {% block content %}{% endblock %}
+
+        </div>
+    </div>
+
+
+
     <div id="mapid"></div>
     <script>
         var mymap = L.map('mapid').setView([38.95,-102.89], 5);
@@ -66,10 +97,6 @@
         }).addTo(mymap);
 
 
-        var marker = L.marker([38.95,-102.89]).addTo(mymap);
-            marker.bindPopup("<h1>Geo Co-ordinates</h1><p>Longitude: </p><p>Latitude:</p>").openPopup();
-
-
         function onMapClick(e) {
 
             if(marker)
@@ -80,7 +107,8 @@
             }
             
             var marker = L.marker(e.latlng).addTo(mymap);
-            marker.bindPopup("<h1>Weather Details</h1><p>Longitude: </p><p>Latitude:</p><p>Temperature: {{ temp }}</p>").openPopup();
+            var l1 = e.latlng.lat
+            marker.bindPopup('<h2>Geo Co-ordinates</h2><br>'+marker.getLatLng() ).openPopup();
             var lat_lng = e.latlng.lat.toFixed(4) + "," + e.latlng.lng.toFixed(4)
             document.getElementById("cord").value = lat_lng
 
@@ -90,7 +118,7 @@
         mymap.on('click', onMapClick);
     </script>
 
-    <h2>Temperature {{ temp }}<h2>
+    
     
 
 
