@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.gis.db import models as geomodels
 
-
+# City Table in PostgresSQL storing co-ordinates and geo-data
 class City(models.Model):
     name = models.CharField(max_length=100, blank=False)
     latitude = models.FloatField(blank=False)
