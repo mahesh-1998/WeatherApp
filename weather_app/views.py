@@ -38,6 +38,7 @@ def index(request):
             try:
                 city = request.POST.get('city')
                 city_obj = City.objects.get(name=city)
+                cord = str(city_obj.latitude) + "," + str(city_obj.longitude)
                 pointsRes = requests.get(get_points_url+cord).json() 
                 hourlyRes = requests.get(pointsRes['properties']["forecastHourly"]).json()
                 temp = hourlyRes["properties"]['periods'][0]['temperature']
