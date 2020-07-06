@@ -1,0 +1,8 @@
+django=3.0.7
+django-geojson=3.0.0
+django-leaflet=0.26.0
+gdal=3.1.0
+geos=3.8.1
+urllib3=1.25.7
+psycopg2=2.8.5
+GDAL=3.1.0
