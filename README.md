@@ -1,0 +1,4 @@
+# WeatherApp
+
+## Database Schema
+
