@@ -6,3 +6,4 @@ geos=3.8.1
 urllib3=1.25.7
 psycopg2=2.8.5
 GDAL=3.1.0
+dj-static=0.0.6
