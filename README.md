@@ -1,5 +1,11 @@
 # WeatherApp
 
+1 Leaflet map showing different cities of USA , Marker and popups .
+
+2 User can get temperature details using co-ordinates or city.
+
+3 Simple database model including city_name , lat, log, geometry (spatial data) is created.
+
 ## Database Schema
 
 ![Desktop](https://user-images.githubusercontent.com/40057902/86567770-8457e900-bf89-11ea-8038-8f679684610b.JPG)
