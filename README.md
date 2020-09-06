@@ -4,3 +4,6 @@
 
 ![Desktop](https://user-images.githubusercontent.com/40057902/86567770-8457e900-bf89-11ea-8038-8f679684610b.JPG)
 
+
+## [View Video](https://dms.licdn.com/playlist/C4E05AQEFSM3iEbmm8g/mp4-720p-30fp-crf28/0?e=1599490800&v=beta&t=vvOzM-FvY0XACf8s_KzC09STe38tUsevxXlV-zKv9-g)
+
