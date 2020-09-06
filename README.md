@@ -7,3 +7,6 @@
 
 ## [View Video](https://dms.licdn.com/playlist/C4E05AQEFSM3iEbmm8g/mp4-720p-30fp-crf28/0?e=1599490800&v=beta&t=vvOzM-FvY0XACf8s_KzC09STe38tUsevxXlV-zKv9-g)
 
+![0](https://user-images.githubusercontent.com/40057902/92328571-55d8b600-f07f-11ea-93fc-518cdfe40924.gif)
+
+
